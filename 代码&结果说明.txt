@@ -1,0 +1,17 @@
+train_bert.py -用训练集结果.csv训练bert-base-chinese，训练两轮
+
+exp_1_original.py -用训练后的bert分类测试集结果.csv的前200条（过滤掉is_fraud为空的数据）
+
+exp_2_stadec.py -用StaDec对抗架构分类测试集结果.csv的前200条（过滤掉is_fraud为空的数据）
+
+exp_3_dydec.py -用DyDec对抗架构分类测试集结果.csv的前200条（过滤掉is_fraud为空的数据）
+
+exp_4_ablation_synonym_llm.py -用LLM进行同义词替换对抗分类测试集结果.csv的前200条（过滤掉is_fraud为空的数据），用于消融实验
+
+其他代码都是子文件，具体代码说明看实验报告。
+
+stadec_adv_200.csv -StaDec对抗结果文件
+
+dydec_trace_200.jsonl和dydec_summary_200.csv -DyDec对抗结果文件
+
+ablation_synonym_llm_200.csv -LLM同义词替换对抗结果文件
